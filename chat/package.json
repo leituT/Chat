@@ -1,0 +1,14 @@
+﻿{
+	"name": "Chat",
+	"description": "一个聊天室程序",
+	"version": "0.1.0",
+	"main": "server.js",
+	"dependencies": {
+		"express": "4.13.x",
+		"socket.io": "1.3.x"
+	},
+	"author": {
+		"name": "谭春龙",
+		"email": ""
+	}
+}

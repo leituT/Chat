@@ -1,0 +1,186 @@
+﻿body {margin: 0;padding:0;}
+ul,ol,h1,h2,h3,h4,p{margin:0;padding:0;}
+li{list-style:none;}
+
+.layer {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,.5);
+    input{
+        position: relative;
+        top: 50%;
+        margin-top: -20px;
+        border: none;
+        padding: 10px;
+        outline: none;
+        font-size: 15px;
+        font-family: 'Microsoft YaHei' Arial;
+    }
+    .tip{
+        position:absolute;
+        top:50%;
+        margin-top:-50px;
+        font-family: 'Microsoft YaHei' Arial;
+        background-color:#000;
+        border-radius:6px;
+        color:#fff;
+        font-size:13px;
+        padding:0 8px 1px 8px;
+        line-height:26px;
+        margin-left:-176px;
+        display:none;
+        &:after{
+            content:"";
+            position:absolute;
+            left:50%;
+            top:100%;
+            border:6px solid transparent;
+            border-top-color:#000;
+            border-bottom:0;
+            margin-left:-6px;
+        }
+    }
+}
+#userName {
+    border-radius: 5px 0 0 5px;
+}
+#btnSave {
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    border-left:1px solid #a2a2a2;
+}
+
+.main{
+    display:none;
+    width:700px;
+    margin:0 auto;
+    position:absolute;
+    top:50%;
+    height:500px;
+    margin-top:-250px;
+    right:0;
+    left:0;
+    border:1px solid #ccc;
+    overflow:hidden;
+    h3{
+        line-height:50px;
+        padding-left:10px;
+        font-weight:400;
+        text-shadow:0 0 2px rgba(0,0,0,.1),0 0 2px rgba(0,0,0,.1);
+        background-color:#f8f8f8;
+        border-bottom:1px solid #ccc;
+    }
+    .content{
+        float:left;
+        width:75%;
+        height:100%;
+        position:relative;
+        ul{
+            width:100%;
+            position:absolute;
+            top:51px;
+            bottom:41px;
+            overflow:auto;
+            /*---滚动条默认显示样式--*/
+            &::-webkit-scrollbar-thumb
+            {
+                background-color: #a6a6a6;
+                border-radius: 6px;
+            }
+            /*---鼠标移动到滚动条显示样式--*/
+            &::-webkit-scrollbar-thumb:hover
+            {
+                background-color: #9a9a9a;
+            }
+            /*---鼠标点击滚动条的颜色---*/
+            &::-webkit-scrollbar-thumb:active
+            {
+                background-color: #333;
+            }
+            /*---滚动条大小--*/
+            &::-webkit-scrollbar
+            {
+                width: 8px;
+                height: 8px;
+            }
+            /*---滚动框背景样式--*/
+            &::-webkit-scrollbar-track-piece
+            {
+                background-color: #fefefe;
+                border-left: 1px solid #ccc;
+                box-shadow:0 0 6px rgba(0, 0, 0, 0.3) inset;
+            }
+            li{
+                font-family:'Microsoft YaHei';
+                padding:5px 15px;
+                line-height:26px;
+                samp{
+                    color:#308497;
+                    font:inherit;
+                    margin-left:15px;
+                }
+            }
+        }
+        div{
+            position:absolute;
+            bottom:0;
+            height:40px;
+            line-height:40px;
+            width:100%;
+            border-top:1px solid #ccc;
+            font-size:0;
+            input{
+                height:100%;
+                border:none;
+                outline:none;
+                margin:0;
+                padding:0;
+                vertical-align:top;
+                text-indent:1em;
+                font-family:'Microsoft YaHei';
+                font-size:15px;
+            }
+            .txt{
+                width:435px;
+            }
+            .btn{
+                text-indent:0;
+                width:90px;
+                background-color:#0094ff;
+                cursor:pointer;
+                color:#fff;
+                letter-spacing:3px;
+            }
+        }
+    }
+    .list{
+        float:right;
+        width:25%;
+        height:100%;
+        border-left:1px solid #ccc;
+        box-sizing:border-box;
+        li{
+            line-height:30px;
+            padding-left:20px;
+            border-bottom:1px solid #ccc;
+            white-space:nowrap;
+            overflow:hidden;
+            letter-spacing:1px;
+            text-overflow:ellipsis;
+            color:#555;
+            text-shadow:0 0 1px rgba(0,0,0,.2),0 0 1px rgba(0,0,0,.2);
+            position:relative;
+            &:before{
+                content:"";
+                position:absolute;
+                left:5px;
+                top:11px;
+                width:8px;height:8px;
+                border-radius:4px;
+                background-color:#ccc;
+            }
+        }
+    }
+}
