@@ -8,7 +8,7 @@ var express = require("express"),
 
 app.use("/", express.static(__dirname));
 
-httpserver.listen(4000, "192.168.1.30");
+httpserver.listen(process.env.PORT || 3000);
 
 
 var auserlist = [];
