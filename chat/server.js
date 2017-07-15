@@ -23,7 +23,7 @@ io.sockets.on('connection', function (socket) {
     //用户登录
     socket.on('login', function (data) {
         var j = 0;
-        for (var i = 0; i < auserlist.length; i++) {
+        for (var i = 0; i < auserlist.length; ++i) {
             if (data.name == auserlist[i].name) {
                 j++;
                 break;
